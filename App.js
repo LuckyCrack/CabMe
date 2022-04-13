@@ -1,26 +1,15 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import { View, Text, StyleSheet,StatusBar, TouchableOpacity } from "react-native";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import HomeScreen from "./screens/HomeScreen";
 
 export default function App() {
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text style={styles.text}>Hello World</Text>
-      </View>
+      <HomeScreen/>
     </Provider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: 15,
-  },
-});
+const styles = StyleSheet.create({});
